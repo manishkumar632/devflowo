@@ -158,12 +158,12 @@ const Login = () => {
                 </label>
               </div>
               <div>
-                <a
+                <Link
                   href="#"
                   className="text-sm text-indigo-600 hover:text-indigo-500"
                 >
                   Forgot password?
-                </a>
+                </Link>
               </div>
             </div>
 

@@ -253,9 +253,9 @@ const RegisterPage = () => {
                 />
                 <label htmlFor="agreeToTerms" className="ml-3 block text-sm text-gray-700">
                   I agree to the{" "}
-                  <a href="#" className="text-indigo-600 hover:text-indigo-500">
+                  <Link href="#" className="text-indigo-600 hover:text-indigo-500">
                     Terms and Conditions
-                  </a>{" "}
+                  </Link>{" "}
                   and{" "}
                   <a href="#" className="text-indigo-600 hover:text-indigo-500">
                     Privacy Policy

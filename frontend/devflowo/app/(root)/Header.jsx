@@ -17,7 +17,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { Separator } from "@/components/ui/separator";
 
 // Define feature links for menu items
 const features = [
@@ -112,11 +111,12 @@ const Header = () => {
                       duration: 0.2,
                       ease: "easeOut",
                     }}
+                    className="bg-white"
                   >
                     <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] p-4">
                       <li className="row-span-3">
                         <NavigationMenuLink asChild>
-                          <a
+                          <Link
                             className="from-blue-50 to-blue-100 flex h-full w-full flex-col justify-end rounded-md bg-gradient-to-b p-6 no-underline outline-hidden select-none focus:shadow-md border border-blue-100"
                             href="/"
                           >
@@ -127,7 +127,7 @@ const Header = () => {
                               The modern platform for development workflows and
                               collaboration.
                             </p>
-                          </a>
+                          </Link>
                         </NavigationMenuLink>
                       </li>
                       <ListItem href="/" title="Overview">
@@ -161,6 +161,7 @@ const Header = () => {
                       duration: 0.2,
                       ease: "easeOut",
                     }}
+                    className="bg-white"
                   >
                     <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                       {features.map((feature) => (
@@ -179,7 +180,7 @@ const Header = () => {
 
               {/* Pricing Link */}
               <NavigationMenuItem>
-                <Link href="/pricing" legacyBehavior passHref>
+                <Link href={`/pricing`}>
                   <NavigationMenuLink
                     className={`${navigationMenuTriggerStyle()} px-3 py-2 text-sm`}
                   >
@@ -202,6 +203,7 @@ const Header = () => {
                       duration: 0.2,
                       ease: "easeOut",
                     }}
+                    className="bg-white"
                   >
                     <ul className="grid w-[300px] gap-3 p-4">
                       <li className="row-span-3">
@@ -249,9 +251,9 @@ const Header = () => {
                       duration: 0.2,
                       ease: "easeOut",
                     }}
-                    className="z-50"
+                    className="bg-white"
                   >
-                    <ul className="flex flex-col w-[200px] p-2 rounded-lg border border-gray-100 shadow-lg bg-white">
+                    <ul className="flex flex-col w-[200px] p-2">
                       <li>
                         <NavigationMenuLink asChild>
                           <Link
@@ -295,12 +297,6 @@ const Header = () => {
 
         {/* Search & User Actions */}
         <div className="flex items-center gap-3">
-          {/* Removed desktop search input */}
-          <div className="hidden md:flex items-center gap-2">
-            <button className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
-              <FiBell className="text-gray-600" size={18} />
-            </button>
-          </div>
 
           <Link
             href="/login"
