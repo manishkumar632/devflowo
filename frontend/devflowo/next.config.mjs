@@ -1,6 +1,6 @@
 // File: next.config.mjs
 import 'dotenv/config';
-const isProd = process.env.APP_ENV === 'production';
+const isProd = true;
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
