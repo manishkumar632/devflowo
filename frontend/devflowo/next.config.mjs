@@ -6,6 +6,7 @@ const isProd = process.env.APP_ENV === 'production';
 const nextConfig = {
   output: 'export',
   basePath: isProd ? '/devflowo' : '',
+  assetPrefix: isProd ? '/devflowo/' : '',
 };
 
 export default nextConfig;
