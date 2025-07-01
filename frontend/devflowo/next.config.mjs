@@ -6,7 +6,7 @@ const isProd = true;
 const nextConfig = {
   output: 'export',
   basePath: isProd ? '/devflowo' : '',
-  assetPrefix: isProd ? '/devflowo/' : '',
+  assetPrefix: isProd ? '/devflowo/devflowo/' : '',
 };
 
 export default nextConfig;
