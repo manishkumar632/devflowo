@@ -37,16 +37,21 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        {/* icon */}
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href={`${process.env.NEXT_PUBLIC_BASE_PATH}/devflowo-logo.svg`}
+        />
         <style>
           {`@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');`}
         </style>
       </head>
       <body
-        className={`open-sans-global antialiased min-h-screen bg-background text-foreground`}
+        className={`open-sans-global antialiased min-h-screen`}
       >
         {children}
       </body>
     </html>
   );
 }
-
