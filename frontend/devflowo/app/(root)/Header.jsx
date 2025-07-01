@@ -11,7 +11,7 @@ const Header = () => {
           <Link href="/">
             {/* replaced img with Next.js Image */}
             <Image
-              src="/devflowo-logo.svg"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/devflowo-logo.svg`}
               alt="DevFlowo Logo"
               width={32}
               height={32}
