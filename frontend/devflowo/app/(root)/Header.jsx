@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 
 const Header = () => {
   return (
@@ -8,10 +9,14 @@ const Header = () => {
       <div className="flex items-center gap-2 cursor-pointer">
         <div className="w-10 h-10 flex items-center justify-center">
           <Link href="/">
-            <img
+            {/* replaced img with Next.js Image */}
+            <Image
               src="/devflowo-logo.svg"
               alt="DevFlowo Logo"
+              width={32}
+              height={32}
               className="w-8 h-8"
+              priority
             />
           </Link>
         </div>
