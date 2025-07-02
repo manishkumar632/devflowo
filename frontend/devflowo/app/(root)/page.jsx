@@ -1,3 +1,4 @@
+import Hero from "@/components/home/Hero";
 import React from "react";
 
 export const metadata = {
@@ -48,12 +49,8 @@ export const metadata = {
 
 const Page = () => {
   return (
-    <main className="p-4">
-      <h1 className="text-3xl font-bold">Welcome to Devflowo</h1>
-      <p className="mt-2 text-lg text-gray-600">
-        Discover, showcase, and share projects built by developers worldwide.
-        Your hub for coding inspiration.
-      </p>
+    <main>
+     <Hero />
     </main>
   );
 };
