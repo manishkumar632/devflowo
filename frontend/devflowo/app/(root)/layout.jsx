@@ -7,9 +7,8 @@ export default function RootLayout({ children }) {
     <>
       <Header />
       <Separator className="bg-black" />
-      <main className="min-h-screen pt-16">
-        {children}
-      </main>
+      <main className="min-h-screen pt-16">{children}</main>
+      <Separator className="border-b-0 border border-t-0" />
       <Footer />
     </>
   );
