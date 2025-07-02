@@ -7,6 +7,7 @@ import { FiSearch, FiUser, FiMenu, FiX, FiBell } from "react-icons/fi";
 import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react";
 import { useState } from "react";
 import Sidebar from "@/components/mobile/Sidebar";
+import { Button } from "@/components/ui/button";
 
 import {
   NavigationMenu,
@@ -297,14 +298,16 @@ const Header = () => {
 
         {/* Search & User Actions */}
         <div className="flex items-center gap-3">
-
-          <Link
-            href="/login"
-            className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-md bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors shadow-sm"
+          {/* Login button using shadcn Button */}
+          <Button
+            asChild
+            variant="outline"
           >
-            <FiUser size={16} />
-            <span>Login</span>
-          </Link>
+            <Link href="/login">
+              <FiUser size={16} />
+              <span>Login</span>
+            </Link>
+          </Button>
 
           {/* Mobile menu button */}
           <button
