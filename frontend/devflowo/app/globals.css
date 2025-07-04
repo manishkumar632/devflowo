@@ -7,3 +7,15 @@
   font-variation-settings:
     "wdth" 100;
 }
+
+/* Prevent horizontal overflow */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* Fix for negative margins causing overflow */
+* {
+  box-sizing: border-box;
+}

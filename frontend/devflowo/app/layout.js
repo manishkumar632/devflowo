@@ -48,7 +48,7 @@ export default function RootLayout({ children }) {
         </style>
       </head>
       <body
-        className={`open-sans-global antialiased min-h-screen`}
+        className={`open-sans-global antialiased min-h-screen overflow-x-hidden`}
       >
         {children}
       </body>

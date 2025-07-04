@@ -1,12 +1,28 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 
 const Hero = () => {
   return (
-    <>
-      <section className="container min-[768px]:hidden min-[1024px]:block px-4 mx-auto">
+    <section className="relative">
+      {/* Dotted pattern background */}
+        <Image
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH}/home/dots.svg`}
+          alt="Dotted Background"
+          width={100}
+          height={100}
+          className="w-56 sm:w-64 md:w-72 lg:w-96 rotate-180 -mt-20 -ml-3 absolute"
+        />
+
+        <Image
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH}/home/dots.svg`}
+          alt="Dotted Background"
+          width={100}
+          height={100}
+          className="w-56 sm:w-64 md:w-72 lg:w-96 z-0 absolute bottom-0 right-0 -mr-3 max-[768px]:-mb-[9px]"
+        />
+      
+      <section className="container min-[768px]:hidden min-[1024px]:block px-4 mx-auto relative">
         <div className="grid grid-cols-1 max-w-7xl mx-auto min-[1024px]:grid-cols-2 gap-4 items-center">
           <div className="justify-around h-full flex flex-col max-[1024px]:gap-8">
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900">
@@ -50,7 +66,7 @@ const Hero = () => {
       </section>
 
       {/* This section is specially designed for screen size between 768px and 1024px */}
-      <section className="max-[768px]:hidden max-[1024px]:block min-[1024px]:hidden container px-4 mx-auto">
+      <section className="max-[768px]:hidden max-[1024px]:block min-[1024px]:hidden container px-4 mx-auto relative">
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 mb-8">
           DevFlowo
         </h1>
@@ -80,7 +96,7 @@ const Hero = () => {
           />
         </div>
       </section>
-    </>
+    </section>
   );
 };
 
